@@ -52,7 +52,19 @@
             sixMenuBtn = new Button();
             corrMenuBtn = new Button();
             bigMenuPanel = new Panel();
+            menuInCardLB = new Label();
+            menuRight_2_LB = new Label();
+            menuRight_1_LB = new Label();
+            menuStartLB = new Label();
+            card_add_left_1_LB = new Label();
+            menuLeft_2_LB = new Label();
+            errorCashPanel = new Panel();
+            errorCash_2_LB = new Label();
+            errorCash_1_LB = new Label();
             bigCardPanel = new Panel();
+            cardAddPanel = new Panel();
+            cardAddEscepeLB = new Label();
+            label2 = new Label();
             balansTB = new TextBox();
             balansLB = new Label();
             bankTB = new TextBox();
@@ -64,22 +76,42 @@
             escep_Right_2_LB = new Label();
             label1 = new Label();
             ok_left_2_LB = new Label();
-            menuRight_2_LB = new Label();
-            menuRight_1_LB = new Label();
-            menuStartLB = new Label();
-            card_add_left_1_LB = new Label();
-            menuLeft_2_LB = new Label();
+            cardAddLB = new Label();
             cardPanel = new Panel();
             cardBtn = new Button();
             cashPanel = new Panel();
             cashBtn = new Button();
+            cashMenuPanel = new Panel();
+            cashMenuBalansLB = new Label();
+            cashEnterLB = new Label();
+            cashPinTB = new TextBox();
+            cashPinLB = new Label();
+            cashNumTB = new TextBox();
+            cashNumLB = new Label();
+            label9 = new Label();
+            label10 = new Label();
+            sumCashPanel = new Panel();
+            errorSumCashPanel = new Panel();
+            balansSumLB = new Label();
+            errorSum_2_LB = new Label();
+            errorSum_1_LB = new Label();
+            sumCashTB = new TextBox();
+            sumCashLB = new Label();
+            label7 = new Label();
+            cashSumLB = new Label();
+            sumCashEnterLB = new Label();
             rightMenuPanel.SuspendLayout();
             lefMenuPanel.SuspendLayout();
             buttonMenuPanel.SuspendLayout();
             bigMenuPanel.SuspendLayout();
+            errorCashPanel.SuspendLayout();
             bigCardPanel.SuspendLayout();
+            cardAddPanel.SuspendLayout();
             cardPanel.SuspendLayout();
             cashPanel.SuspendLayout();
+            cashMenuPanel.SuspendLayout();
+            sumCashPanel.SuspendLayout();
+            errorSumCashPanel.SuspendLayout();
             SuspendLayout();
             // 
             // left_1_MenuBtn
@@ -113,6 +145,7 @@
             right_1_MenuBtn.TabIndex = 3;
             right_1_MenuBtn.Text = "<";
             right_1_MenuBtn.UseVisualStyleBackColor = true;
+            right_1_MenuBtn.Click += right_1_MenuBtn_Click;
             // 
             // right_2_MenuBtn
             // 
@@ -134,6 +167,7 @@
             sevenMenuBtn.TabIndex = 5;
             sevenMenuBtn.Text = "7";
             sevenMenuBtn.UseVisualStyleBackColor = true;
+            sevenMenuBtn.Click += button_Click;
             // 
             // eightMenuBtn
             // 
@@ -144,6 +178,7 @@
             eightMenuBtn.TabIndex = 6;
             eightMenuBtn.Text = "8";
             eightMenuBtn.UseVisualStyleBackColor = true;
+            eightMenuBtn.Click += button_Click;
             // 
             // nineMenuBtn
             // 
@@ -154,6 +189,7 @@
             nineMenuBtn.TabIndex = 7;
             nineMenuBtn.Text = "9";
             nineMenuBtn.UseVisualStyleBackColor = true;
+            nineMenuBtn.Click += button_Click;
             // 
             // delMenuBtn
             // 
@@ -165,6 +201,7 @@
             delMenuBtn.TabIndex = 8;
             delMenuBtn.Text = "Delete";
             delMenuBtn.UseVisualStyleBackColor = true;
+            delMenuBtn.Click += delMenuBtn_Click;
             // 
             // rightMenuPanel
             // 
@@ -208,7 +245,7 @@
             buttonMenuPanel.Controls.Add(delMenuBtn);
             buttonMenuPanel.Location = new Point(273, 311);
             buttonMenuPanel.Name = "buttonMenuPanel";
-            buttonMenuPanel.Size = new Size(300, 187);
+            buttonMenuPanel.Size = new Size(300, 174);
             buttonMenuPanel.TabIndex = 10;
             // 
             // starMenuBtn
@@ -230,6 +267,7 @@
             oneMenuBtn.TabIndex = 13;
             oneMenuBtn.Text = "1";
             oneMenuBtn.UseVisualStyleBackColor = true;
+            oneMenuBtn.Click += button_Click;
             // 
             // zeroMenuBtn
             // 
@@ -240,6 +278,7 @@
             zeroMenuBtn.TabIndex = 12;
             zeroMenuBtn.Text = "0";
             zeroMenuBtn.UseVisualStyleBackColor = true;
+            zeroMenuBtn.Click += button_Click;
             // 
             // twoMenuBtn
             // 
@@ -250,6 +289,7 @@
             twoMenuBtn.TabIndex = 14;
             twoMenuBtn.Text = "2";
             twoMenuBtn.UseVisualStyleBackColor = true;
+            twoMenuBtn.Click += button_Click;
             // 
             // zzzMenuBtn
             // 
@@ -260,6 +300,7 @@
             zzzMenuBtn.TabIndex = 13;
             zzzMenuBtn.Text = "00";
             zzzMenuBtn.UseVisualStyleBackColor = true;
+            zzzMenuBtn.Click += button_Click;
             // 
             // enterMenuBtn
             // 
@@ -271,6 +312,7 @@
             enterMenuBtn.TabIndex = 14;
             enterMenuBtn.Text = "Enter";
             enterMenuBtn.UseVisualStyleBackColor = true;
+            enterMenuBtn.Click += enterMenuBtn_Click;
             // 
             // threeMenuBtn
             // 
@@ -281,6 +323,7 @@
             threeMenuBtn.TabIndex = 15;
             threeMenuBtn.Text = "3";
             threeMenuBtn.UseVisualStyleBackColor = true;
+            threeMenuBtn.Click += button_Click;
             // 
             // button16
             // 
@@ -299,6 +342,7 @@
             fourMenuBtn.TabIndex = 9;
             fourMenuBtn.Text = "4";
             fourMenuBtn.UseVisualStyleBackColor = true;
+            fourMenuBtn.Click += button_Click;
             // 
             // fiveMenuBtn
             // 
@@ -309,6 +353,7 @@
             fiveMenuBtn.TabIndex = 10;
             fiveMenuBtn.Text = "5";
             fiveMenuBtn.UseVisualStyleBackColor = true;
+            fiveMenuBtn.Click += button_Click;
             // 
             // sixMenuBtn
             // 
@@ -319,6 +364,7 @@
             sixMenuBtn.TabIndex = 11;
             sixMenuBtn.Text = "6";
             sixMenuBtn.UseVisualStyleBackColor = true;
+            sixMenuBtn.Click += button_Click;
             // 
             // corrMenuBtn
             // 
@@ -334,20 +380,120 @@
             // bigMenuPanel
             // 
             bigMenuPanel.BackColor = Color.Black;
-            bigMenuPanel.Controls.Add(bigCardPanel);
+            bigMenuPanel.Controls.Add(menuInCardLB);
             bigMenuPanel.Controls.Add(menuRight_2_LB);
             bigMenuPanel.Controls.Add(menuRight_1_LB);
             bigMenuPanel.Controls.Add(menuStartLB);
             bigMenuPanel.Controls.Add(card_add_left_1_LB);
             bigMenuPanel.Controls.Add(menuLeft_2_LB);
-            bigMenuPanel.Location = new Point(162, 31);
+            bigMenuPanel.Location = new Point(162, 29);
             bigMenuPanel.Name = "bigMenuPanel";
             bigMenuPanel.Size = new Size(504, 219);
             bigMenuPanel.TabIndex = 17;
             // 
+            // menuInCardLB
+            // 
+            menuInCardLB.AutoSize = true;
+            menuInCardLB.Font = new Font("Book Antiqua", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            menuInCardLB.ForeColor = SystemColors.ButtonHighlight;
+            menuInCardLB.Location = new Point(120, 104);
+            menuInCardLB.Name = "menuInCardLB";
+            menuInCardLB.Size = new Size(273, 32);
+            menuInCardLB.TabIndex = 22;
+            menuInCardLB.Text = "ВСТАВЬТЕ  КАРТУ";
+            // 
+            // menuRight_2_LB
+            // 
+            menuRight_2_LB.AutoSize = true;
+            menuRight_2_LB.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            menuRight_2_LB.ForeColor = SystemColors.ButtonFace;
+            menuRight_2_LB.Location = new Point(419, 162);
+            menuRight_2_LB.Name = "menuRight_2_LB";
+            menuRight_2_LB.Size = new Size(77, 21);
+            menuRight_2_LB.TabIndex = 20;
+            menuRight_2_LB.Text = "БАЛАНС";
+            // 
+            // menuRight_1_LB
+            // 
+            menuRight_1_LB.AutoSize = true;
+            menuRight_1_LB.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            menuRight_1_LB.ForeColor = SystemColors.ButtonFace;
+            menuRight_1_LB.Location = new Point(424, 60);
+            menuRight_1_LB.Name = "menuRight_1_LB";
+            menuRight_1_LB.Size = new Size(69, 21);
+            menuRight_1_LB.TabIndex = 21;
+            menuRight_1_LB.Text = "ВЫЙТИ";
+            menuRight_1_LB.Click += menuRight_1_LB_Click;
+            // 
+            // menuStartLB
+            // 
+            menuStartLB.AutoSize = true;
+            menuStartLB.Font = new Font("Book Antiqua", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            menuStartLB.ForeColor = SystemColors.ButtonHighlight;
+            menuStartLB.Location = new Point(185, 104);
+            menuStartLB.Name = "menuStartLB";
+            menuStartLB.Size = new Size(140, 32);
+            menuStartLB.TabIndex = 18;
+            menuStartLB.Text = "HELLO !!!";
+            // 
+            // card_add_left_1_LB
+            // 
+            card_add_left_1_LB.AutoSize = true;
+            card_add_left_1_LB.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            card_add_left_1_LB.ForeColor = SystemColors.ButtonFace;
+            card_add_left_1_LB.Location = new Point(9, 60);
+            card_add_left_1_LB.Name = "card_add_left_1_LB";
+            card_add_left_1_LB.Size = new Size(129, 21);
+            card_add_left_1_LB.TabIndex = 19;
+            card_add_left_1_LB.Text = "ВЫДАТЬ КАРТУ";
+            // 
+            // menuLeft_2_LB
+            // 
+            menuLeft_2_LB.AutoSize = true;
+            menuLeft_2_LB.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            menuLeft_2_LB.ForeColor = SystemColors.ButtonFace;
+            menuLeft_2_LB.Location = new Point(8, 162);
+            menuLeft_2_LB.Name = "menuLeft_2_LB";
+            menuLeft_2_LB.Size = new Size(61, 21);
+            menuLeft_2_LB.TabIndex = 18;
+            menuLeft_2_LB.Text = "СНЯТЬ";
+            // 
+            // errorCashPanel
+            // 
+            errorCashPanel.BackColor = Color.Black;
+            errorCashPanel.Controls.Add(errorCash_2_LB);
+            errorCashPanel.Controls.Add(errorCash_1_LB);
+            errorCashPanel.Location = new Point(98, 16);
+            errorCashPanel.Name = "errorCashPanel";
+            errorCashPanel.Size = new Size(310, 183);
+            errorCashPanel.TabIndex = 30;
+            // 
+            // errorCash_2_LB
+            // 
+            errorCash_2_LB.AutoSize = true;
+            errorCash_2_LB.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            errorCash_2_LB.ForeColor = SystemColors.ButtonFace;
+            errorCash_2_LB.Location = new Point(52, 104);
+            errorCash_2_LB.Name = "errorCash_2_LB";
+            errorCash_2_LB.Size = new Size(205, 17);
+            errorCash_2_LB.TabIndex = 1;
+            errorCash_2_LB.Text = "(неверно указаны карта или PIN)";
+            // 
+            // errorCash_1_LB
+            // 
+            errorCash_1_LB.AutoSize = true;
+            errorCash_1_LB.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            errorCash_1_LB.ForeColor = SystemColors.ButtonFace;
+            errorCash_1_LB.Location = new Point(101, 53);
+            errorCash_1_LB.Name = "errorCash_1_LB";
+            errorCash_1_LB.Size = new Size(112, 25);
+            errorCash_1_LB.TabIndex = 0;
+            errorCash_1_LB.Text = "ОШИБКА !!!";
+            // 
             // bigCardPanel
             // 
             bigCardPanel.BackColor = Color.Black;
+            bigCardPanel.Controls.Add(cardAddPanel);
             bigCardPanel.Controls.Add(balansTB);
             bigCardPanel.Controls.Add(balansLB);
             bigCardPanel.Controls.Add(bankTB);
@@ -359,10 +505,42 @@
             bigCardPanel.Controls.Add(escep_Right_2_LB);
             bigCardPanel.Controls.Add(label1);
             bigCardPanel.Controls.Add(ok_left_2_LB);
-            bigCardPanel.Location = new Point(0, 23);
+            bigCardPanel.Location = new Point(802, 9);
             bigCardPanel.Name = "bigCardPanel";
             bigCardPanel.Size = new Size(504, 219);
             bigCardPanel.TabIndex = 19;
+            // 
+            // cardAddPanel
+            // 
+            cardAddPanel.BackColor = Color.Black;
+            cardAddPanel.Controls.Add(cardAddEscepeLB);
+            cardAddPanel.Controls.Add(label2);
+            cardAddPanel.Location = new Point(98, 0);
+            cardAddPanel.Name = "cardAddPanel";
+            cardAddPanel.Size = new Size(310, 211);
+            cardAddPanel.TabIndex = 30;
+            // 
+            // cardAddEscepeLB
+            // 
+            cardAddEscepeLB.AutoSize = true;
+            cardAddEscepeLB.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            cardAddEscepeLB.ForeColor = SystemColors.ButtonFace;
+            cardAddEscepeLB.Location = new Point(83, 106);
+            cardAddEscepeLB.Name = "cardAddEscepeLB";
+            cardAddEscepeLB.Size = new Size(137, 17);
+            cardAddEscepeLB.TabIndex = 1;
+            cardAddEscepeLB.Text = "(НАЖМИТЕ ОТМЕНА)";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.ButtonFace;
+            label2.Location = new Point(76, 66);
+            label2.Name = "label2";
+            label2.Size = new Size(154, 25);
+            label2.TabIndex = 0;
+            label2.Text = "КАРТА  ВЫДАНА";
             // 
             // balansTB
             // 
@@ -457,68 +635,20 @@
             // ok_left_2_LB
             // 
             ok_left_2_LB.AutoSize = true;
-            ok_left_2_LB.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            ok_left_2_LB.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             ok_left_2_LB.ForeColor = SystemColors.ButtonFace;
-            ok_left_2_LB.Location = new Point(8, 162);
+            ok_left_2_LB.Location = new Point(184, 194);
             ok_left_2_LB.Name = "ok_left_2_LB";
-            ok_left_2_LB.Size = new Size(86, 21);
+            ok_left_2_LB.Size = new Size(192, 17);
             ok_left_2_LB.TabIndex = 18;
-            ok_left_2_LB.Text = "ПРИНЯТЬ";
+            ok_left_2_LB.Text = "Нажмите ENTER для выдачи";
             // 
-            // menuRight_2_LB
+            // cardAddLB
             // 
-            menuRight_2_LB.AutoSize = true;
-            menuRight_2_LB.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            menuRight_2_LB.ForeColor = SystemColors.ButtonFace;
-            menuRight_2_LB.Location = new Point(391, 162);
-            menuRight_2_LB.Name = "menuRight_2_LB";
-            menuRight_2_LB.Size = new Size(99, 21);
-            menuRight_2_LB.TabIndex = 20;
-            menuRight_2_LB.Text = "СМЕНА PIN";
-            // 
-            // menuRight_1_LB
-            // 
-            menuRight_1_LB.AutoSize = true;
-            menuRight_1_LB.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            menuRight_1_LB.ForeColor = SystemColors.ButtonFace;
-            menuRight_1_LB.Location = new Point(388, 60);
-            menuRight_1_LB.Name = "menuRight_1_LB";
-            menuRight_1_LB.Size = new Size(106, 21);
-            menuRight_1_LB.TabIndex = 21;
-            menuRight_1_LB.Text = "ПОЛОЖИТЬ";
-            // 
-            // menuStartLB
-            // 
-            menuStartLB.AutoSize = true;
-            menuStartLB.Font = new Font("Book Antiqua", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            menuStartLB.ForeColor = SystemColors.ButtonHighlight;
-            menuStartLB.Location = new Point(186, 60);
-            menuStartLB.Name = "menuStartLB";
-            menuStartLB.Size = new Size(140, 32);
-            menuStartLB.TabIndex = 18;
-            menuStartLB.Text = "HELLO !!!";
-            // 
-            // card_add_left_1_LB
-            // 
-            card_add_left_1_LB.AutoSize = true;
-            card_add_left_1_LB.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            card_add_left_1_LB.ForeColor = SystemColors.ButtonFace;
-            card_add_left_1_LB.Location = new Point(9, 60);
-            card_add_left_1_LB.Name = "card_add_left_1_LB";
-            card_add_left_1_LB.Size = new Size(60, 21);
-            card_add_left_1_LB.TabIndex = 19;
-            card_add_left_1_LB.Text = "КАРТА";
-            // 
-            // menuLeft_2_LB
-            // 
-            menuLeft_2_LB.AutoSize = true;
-            menuLeft_2_LB.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            menuLeft_2_LB.ForeColor = SystemColors.ButtonFace;
-            menuLeft_2_LB.Location = new Point(8, 162);
-            menuLeft_2_LB.Name = "menuLeft_2_LB";
-            menuLeft_2_LB.Size = new Size(61, 21);
-            menuLeft_2_LB.TabIndex = 18;
-            menuLeft_2_LB.Text = "СНЯТЬ";
+            cardAddLB.Location = new Point(0, 0);
+            cardAddLB.Name = "cardAddLB";
+            cardAddLB.Size = new Size(100, 23);
+            cardAddLB.TabIndex = 0;
             // 
             // cardPanel
             // 
@@ -540,6 +670,7 @@
             cardBtn.TabIndex = 20;
             cardBtn.Text = "CARD";
             cardBtn.UseVisualStyleBackColor = false;
+            cardBtn.Click += cardBtn_Click;
             // 
             // cashPanel
             // 
@@ -552,7 +683,7 @@
             // 
             // cashBtn
             // 
-            cashBtn.BackColor = Color.FromArgb(0, 64, 0);
+            cashBtn.BackColor = Color.White;
             cashBtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             cashBtn.Location = new Point(9, 7);
             cashBtn.Name = "cashBtn";
@@ -561,12 +692,219 @@
             cashBtn.Text = "CASH";
             cashBtn.UseVisualStyleBackColor = false;
             // 
+            // cashMenuPanel
+            // 
+            cashMenuPanel.BackColor = Color.Black;
+            cashMenuPanel.Controls.Add(cashMenuBalansLB);
+            cashMenuPanel.Controls.Add(cashEnterLB);
+            cashMenuPanel.Controls.Add(errorCashPanel);
+            cashMenuPanel.Controls.Add(cashPinTB);
+            cashMenuPanel.Controls.Add(cashPinLB);
+            cashMenuPanel.Controls.Add(cashNumTB);
+            cashMenuPanel.Controls.Add(cashNumLB);
+            cashMenuPanel.Controls.Add(label9);
+            cashMenuPanel.Controls.Add(label10);
+            cashMenuPanel.Location = new Point(802, 234);
+            cashMenuPanel.Name = "cashMenuPanel";
+            cashMenuPanel.Size = new Size(504, 219);
+            cashMenuPanel.TabIndex = 20;
+            // 
+            // cashMenuBalansLB
+            // 
+            cashMenuBalansLB.AutoSize = true;
+            cashMenuBalansLB.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            cashMenuBalansLB.ForeColor = SystemColors.ButtonFace;
+            cashMenuBalansLB.Location = new Point(15, 162);
+            cashMenuBalansLB.Name = "cashMenuBalansLB";
+            cashMenuBalansLB.Size = new Size(77, 21);
+            cashMenuBalansLB.TabIndex = 31;
+            cashMenuBalansLB.Text = "БАЛАНС";
+            // 
+            // cashEnterLB
+            // 
+            cashEnterLB.AutoSize = true;
+            cashEnterLB.ForeColor = SystemColors.ButtonFace;
+            cashEnterLB.Location = new Point(165, 173);
+            cashEnterLB.Name = "cashEnterLB";
+            cashEnterLB.Size = new Size(175, 15);
+            cashEnterLB.TabIndex = 2;
+            cashEnterLB.Text = "Для выхода нажмите ОТМЕНА";
+            // 
+            // cashPinTB
+            // 
+            cashPinTB.Location = new Point(177, 127);
+            cashPinTB.Name = "cashPinTB";
+            cashPinTB.Size = new Size(204, 23);
+            cashPinTB.TabIndex = 25;
+            // 
+            // cashPinLB
+            // 
+            cashPinLB.AutoSize = true;
+            cashPinLB.ForeColor = SystemColors.ButtonFace;
+            cashPinLB.Location = new Point(98, 133);
+            cashPinLB.Name = "cashPinLB";
+            cashPinLB.Size = new Size(57, 15);
+            cashPinLB.TabIndex = 24;
+            cashPinLB.Text = "PIN-code";
+            // 
+            // cashNumTB
+            // 
+            cashNumTB.Location = new Point(177, 62);
+            cashNumTB.Name = "cashNumTB";
+            cashNumTB.Size = new Size(204, 23);
+            cashNumTB.TabIndex = 23;
+            // 
+            // cashNumLB
+            // 
+            cashNumLB.AutoSize = true;
+            cashNumLB.ForeColor = SystemColors.ButtonFace;
+            cashNumLB.Location = new Point(112, 69);
+            cashNumLB.Name = "cashNumLB";
+            cashNumLB.Size = new Size(43, 15);
+            cashNumLB.TabIndex = 22;
+            cashNumLB.Text = "номер";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.ForeColor = SystemColors.ButtonFace;
+            label9.Location = new Point(417, 162);
+            label9.Name = "label9";
+            label9.Size = new Size(77, 21);
+            label9.TabIndex = 20;
+            label9.Text = "ОТМЕНА";
+            label9.Click += label9_Click;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Book Antiqua", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.ForeColor = SystemColors.ButtonHighlight;
+            label10.Location = new Point(152, 16);
+            label10.Name = "label10";
+            label10.Size = new Size(229, 23);
+            label10.TabIndex = 18;
+            label10.Text = "Введите данные карты";
+            // 
+            // sumCashPanel
+            // 
+            sumCashPanel.BackColor = Color.Black;
+            sumCashPanel.Controls.Add(errorSumCashPanel);
+            sumCashPanel.Controls.Add(sumCashTB);
+            sumCashPanel.Controls.Add(sumCashLB);
+            sumCashPanel.Controls.Add(label7);
+            sumCashPanel.Controls.Add(cashSumLB);
+            sumCashPanel.Controls.Add(sumCashEnterLB);
+            sumCashPanel.Location = new Point(802, 459);
+            sumCashPanel.Name = "sumCashPanel";
+            sumCashPanel.Size = new Size(504, 219);
+            sumCashPanel.TabIndex = 21;
+            // 
+            // errorSumCashPanel
+            // 
+            errorSumCashPanel.BackColor = Color.Black;
+            errorSumCashPanel.Controls.Add(balansSumLB);
+            errorSumCashPanel.Controls.Add(errorSum_2_LB);
+            errorSumCashPanel.Controls.Add(errorSum_1_LB);
+            errorSumCashPanel.Location = new Point(103, 16);
+            errorSumCashPanel.Name = "errorSumCashPanel";
+            errorSumCashPanel.Size = new Size(310, 183);
+            errorSumCashPanel.TabIndex = 30;
+            // 
+            // balansSumLB
+            // 
+            balansSumLB.AutoSize = true;
+            balansSumLB.ForeColor = SystemColors.ButtonFace;
+            balansSumLB.Location = new Point(62, 137);
+            balansSumLB.Name = "balansSumLB";
+            balansSumLB.Size = new Size(0, 15);
+            balansSumLB.TabIndex = 31;
+            balansSumLB.Click += balansSumLB_Click;
+            // 
+            // errorSum_2_LB
+            // 
+            errorSum_2_LB.AutoSize = true;
+            errorSum_2_LB.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            errorSum_2_LB.ForeColor = SystemColors.ButtonFace;
+            errorSum_2_LB.Location = new Point(57, 104);
+            errorSum_2_LB.Name = "errorSum_2_LB";
+            errorSum_2_LB.Size = new Size(201, 17);
+            errorSum_2_LB.TabIndex = 1;
+            errorSum_2_LB.Text = "( не хватает  средств  на  счету )";
+            errorSum_2_LB.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // errorSum_1_LB
+            // 
+            errorSum_1_LB.AutoSize = true;
+            errorSum_1_LB.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            errorSum_1_LB.ForeColor = SystemColors.ButtonFace;
+            errorSum_1_LB.Location = new Point(95, 53);
+            errorSum_1_LB.Name = "errorSum_1_LB";
+            errorSum_1_LB.Size = new Size(112, 25);
+            errorSum_1_LB.TabIndex = 0;
+            errorSum_1_LB.Text = "ОШИБКА !!!";
+            errorSum_1_LB.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // sumCashTB
+            // 
+            sumCashTB.Location = new Point(177, 62);
+            sumCashTB.Name = "sumCashTB";
+            sumCashTB.Size = new Size(204, 23);
+            sumCashTB.TabIndex = 23;
+            // 
+            // sumCashLB
+            // 
+            sumCashLB.AutoSize = true;
+            sumCashLB.ForeColor = SystemColors.ButtonFace;
+            sumCashLB.Location = new Point(112, 69);
+            sumCashLB.Name = "sumCashLB";
+            sumCashLB.Size = new Size(43, 15);
+            sumCashLB.TabIndex = 22;
+            sumCashLB.Text = "сумма";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = SystemColors.ButtonFace;
+            label7.Location = new Point(417, 162);
+            label7.Name = "label7";
+            label7.Size = new Size(77, 21);
+            label7.TabIndex = 20;
+            label7.Text = "ОТМЕНА";
+            // 
+            // cashSumLB
+            // 
+            cashSumLB.AutoSize = true;
+            cashSumLB.Font = new Font("Book Antiqua", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            cashSumLB.ForeColor = SystemColors.ButtonHighlight;
+            cashSumLB.Location = new Point(128, 16);
+            cashSumLB.Name = "cashSumLB";
+            cashSumLB.Size = new Size(260, 23);
+            cashSumLB.TabIndex = 18;
+            cashSumLB.Text = "Введите сумму для снятия";
+            // 
+            // sumCashEnterLB
+            // 
+            sumCashEnterLB.AutoSize = true;
+            sumCashEnterLB.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            sumCashEnterLB.ForeColor = SystemColors.ButtonFace;
+            sumCashEnterLB.Location = new Point(160, 133);
+            sumCashEnterLB.Name = "sumCashEnterLB";
+            sumCashEnterLB.Size = new Size(179, 17);
+            sumCashEnterLB.TabIndex = 18;
+            sumCashEnterLB.Text = "для ввода нажмите ENTER";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Green;
-            ClientSize = new Size(872, 510);
+            ClientSize = new Size(999, 510);
+            Controls.Add(sumCashPanel);
+            Controls.Add(cashMenuPanel);
+            Controls.Add(bigCardPanel);
             Controls.Add(cashPanel);
             Controls.Add(cardPanel);
             Controls.Add(bigMenuPanel);
@@ -580,10 +918,20 @@
             buttonMenuPanel.ResumeLayout(false);
             bigMenuPanel.ResumeLayout(false);
             bigMenuPanel.PerformLayout();
+            errorCashPanel.ResumeLayout(false);
+            errorCashPanel.PerformLayout();
             bigCardPanel.ResumeLayout(false);
             bigCardPanel.PerformLayout();
+            cardAddPanel.ResumeLayout(false);
+            cardAddPanel.PerformLayout();
             cardPanel.ResumeLayout(false);
             cashPanel.ResumeLayout(false);
+            cashMenuPanel.ResumeLayout(false);
+            cashMenuPanel.PerformLayout();
+            sumCashPanel.ResumeLayout(false);
+            sumCashPanel.PerformLayout();
+            errorSumCashPanel.ResumeLayout(false);
+            errorSumCashPanel.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -633,5 +981,32 @@
         private Label escep_Right_2_LB;
         private Label label1;
         private Label ok_left_2_LB;
+        private Label cardAddLB;
+        private Panel cardAddPanel;
+        private Label label2;
+        private Label cardAddEscepeLB;
+        private Panel cashMenuPanel;
+        private Panel errorCashPanel;
+        private Label errorCash_2_LB;
+        private Label errorCash_1_LB;
+        private TextBox cashPinTB;
+        private Label cashPinLB;
+        private TextBox cashNumTB;
+        private Label cashNumLB;
+        private Label label9;
+        private Label label10;
+        private Panel sumCashPanel;
+        private Panel errorSumCashPanel;
+        private Label errorSum_2_LB;
+        private Label errorSum_1_LB;
+        private TextBox sumCashTB;
+        private Label sumCashLB;
+        private Label label7;
+        private Label cashSumLB;
+        private Label sumCashEnterLB;
+        private Label cashEnterLB;
+        private Label menuInCardLB;
+        private Label balansSumLB;
+        private Label cashMenuBalansLB;
     }
 }
