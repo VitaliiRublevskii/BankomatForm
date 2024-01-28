@@ -62,6 +62,7 @@
             errorCash_2_LB = new Label();
             errorCash_1_LB = new Label();
             bigCardPanel = new Panel();
+            label3 = new Label();
             cardAddPanel = new Panel();
             cardAddEscepeLB = new Label();
             label2 = new Label();
@@ -82,6 +83,7 @@
             cashPanel = new Panel();
             cashBtn = new Button();
             cashMenuPanel = new Panel();
+            label4 = new Label();
             cashMenuBalansLB = new Label();
             cashEnterLB = new Label();
             cashPinTB = new TextBox();
@@ -91,6 +93,7 @@
             label9 = new Label();
             label10 = new Label();
             sumCashPanel = new Panel();
+            label5 = new Label();
             errorSumCashPanel = new Panel();
             balansSumLB = new Label();
             errorSum_2_LB = new Label();
@@ -380,6 +383,8 @@
             // bigMenuPanel
             // 
             bigMenuPanel.BackColor = Color.Black;
+            bigMenuPanel.BackgroundImage = Properties.Resources.bleck;
+            bigMenuPanel.BackgroundImageLayout = ImageLayout.Stretch;
             bigMenuPanel.Controls.Add(menuInCardLB);
             bigMenuPanel.Controls.Add(menuRight_2_LB);
             bigMenuPanel.Controls.Add(menuRight_1_LB);
@@ -396,7 +401,7 @@
             menuInCardLB.AutoSize = true;
             menuInCardLB.Font = new Font("Book Antiqua", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
             menuInCardLB.ForeColor = SystemColors.ButtonHighlight;
-            menuInCardLB.Location = new Point(120, 104);
+            menuInCardLB.Location = new Point(138, 104);
             menuInCardLB.Name = "menuInCardLB";
             menuInCardLB.Size = new Size(273, 32);
             menuInCardLB.TabIndex = 22;
@@ -432,9 +437,9 @@
             menuStartLB.ForeColor = SystemColors.ButtonHighlight;
             menuStartLB.Location = new Point(185, 104);
             menuStartLB.Name = "menuStartLB";
-            menuStartLB.Size = new Size(140, 32);
+            menuStartLB.Size = new Size(167, 32);
             menuStartLB.TabIndex = 18;
-            menuStartLB.Text = "HELLO !!!";
+            menuStartLB.Text = "ПРИВЕТ  !!!";
             // 
             // card_add_left_1_LB
             // 
@@ -461,6 +466,8 @@
             // errorCashPanel
             // 
             errorCashPanel.BackColor = Color.Black;
+            errorCashPanel.BackgroundImage = Properties.Resources.world_bl_1675076320_8215;
+            errorCashPanel.BackgroundImageLayout = ImageLayout.Stretch;
             errorCashPanel.Controls.Add(errorCash_2_LB);
             errorCashPanel.Controls.Add(errorCash_1_LB);
             errorCashPanel.Location = new Point(98, 16);
@@ -493,6 +500,9 @@
             // bigCardPanel
             // 
             bigCardPanel.BackColor = Color.Black;
+            bigCardPanel.BackgroundImage = Properties.Resources.world_bl_1675076320_8215;
+            bigCardPanel.BackgroundImageLayout = ImageLayout.Stretch;
+            bigCardPanel.Controls.Add(label3);
             bigCardPanel.Controls.Add(cardAddPanel);
             bigCardPanel.Controls.Add(balansTB);
             bigCardPanel.Controls.Add(balansLB);
@@ -510,9 +520,21 @@
             bigCardPanel.Size = new Size(504, 219);
             bigCardPanel.TabIndex = 19;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.ButtonFace;
+            label3.Location = new Point(425, 59);
+            label3.Name = "label3";
+            label3.Size = new Size(69, 21);
+            label3.TabIndex = 22;
+            label3.Text = "ВЫЙТИ";
+            // 
             // cardAddPanel
             // 
             cardAddPanel.BackColor = Color.Black;
+            cardAddPanel.BackgroundImage = Properties.Resources.world_bl_1675076320_8215;
             cardAddPanel.Controls.Add(cardAddEscepeLB);
             cardAddPanel.Controls.Add(label2);
             cardAddPanel.Location = new Point(98, 0);
@@ -662,6 +684,7 @@
             // cardBtn
             // 
             cardBtn.BackColor = Color.Black;
+            cardBtn.BackgroundImage = Properties.Resources.world_bl_1675076320_8215;
             cardBtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             cardBtn.ForeColor = SystemColors.ButtonFace;
             cardBtn.Location = new Point(3, 14);
@@ -684,10 +707,11 @@
             // cashBtn
             // 
             cashBtn.BackColor = Color.White;
+            cashBtn.BackgroundImage = Properties.Resources.dollar_1;
             cashBtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             cashBtn.Location = new Point(9, 7);
             cashBtn.Name = "cashBtn";
-            cashBtn.Size = new Size(275, 27);
+            cashBtn.Size = new Size(275, 38);
             cashBtn.TabIndex = 19;
             cashBtn.Text = "CASH";
             cashBtn.UseVisualStyleBackColor = false;
@@ -695,6 +719,9 @@
             // cashMenuPanel
             // 
             cashMenuPanel.BackColor = Color.Black;
+            cashMenuPanel.BackgroundImage = Properties.Resources.world_bl_1675076320_8215;
+            cashMenuPanel.BackgroundImageLayout = ImageLayout.Stretch;
+            cashMenuPanel.Controls.Add(label4);
             cashMenuPanel.Controls.Add(cashMenuBalansLB);
             cashMenuPanel.Controls.Add(cashEnterLB);
             cashMenuPanel.Controls.Add(errorCashPanel);
@@ -708,6 +735,17 @@
             cashMenuPanel.Name = "cashMenuPanel";
             cashMenuPanel.Size = new Size(504, 219);
             cashMenuPanel.TabIndex = 20;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.ButtonFace;
+            label4.Location = new Point(425, 56);
+            label4.Name = "label4";
+            label4.Size = new Size(69, 21);
+            label4.TabIndex = 22;
+            label4.Text = "ВЫЙТИ";
             // 
             // cashMenuBalansLB
             // 
@@ -790,6 +828,9 @@
             // sumCashPanel
             // 
             sumCashPanel.BackColor = Color.Black;
+            sumCashPanel.BackgroundImage = Properties.Resources.world_bl_1675076320_8215;
+            sumCashPanel.BackgroundImageLayout = ImageLayout.Stretch;
+            sumCashPanel.Controls.Add(label5);
             sumCashPanel.Controls.Add(errorSumCashPanel);
             sumCashPanel.Controls.Add(sumCashTB);
             sumCashPanel.Controls.Add(sumCashLB);
@@ -801,9 +842,22 @@
             sumCashPanel.Size = new Size(504, 219);
             sumCashPanel.TabIndex = 21;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = SystemColors.ButtonFace;
+            label5.Location = new Point(425, 60);
+            label5.Name = "label5";
+            label5.Size = new Size(69, 21);
+            label5.TabIndex = 22;
+            label5.Text = "ВЫЙТИ";
+            // 
             // errorSumCashPanel
             // 
             errorSumCashPanel.BackColor = Color.Black;
+            errorSumCashPanel.BackgroundImage = Properties.Resources.world_bl_1675076320_8215;
+            errorSumCashPanel.BackgroundImageLayout = ImageLayout.Stretch;
             errorSumCashPanel.Controls.Add(balansSumLB);
             errorSumCashPanel.Controls.Add(errorSum_2_LB);
             errorSumCashPanel.Controls.Add(errorSum_1_LB);
@@ -1008,5 +1062,8 @@
         private Label menuInCardLB;
         private Label balansSumLB;
         private Label cashMenuBalansLB;
+        private Label label3;
+        private Label label4;
+        private Label label5;
     }
 }

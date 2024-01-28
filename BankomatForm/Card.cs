@@ -15,6 +15,7 @@ namespace BankomatForm
         //public DateOnly Date { get; set; }
 
         public Card() { }
+        public Card(string number) { Number = number; }
         public Card(string bank, string number, string pin, double balans)
         {
             Bank = bank;

@@ -63,7 +63,7 @@ namespace BankomatForm
 
         //  Левая нижняя кнопка:
         //  (СНЯТЬ) на панели МЕНЮ
-
+        //  (БАЛАНС) на панели ввода карты и пина
         private void left_2_MenuBtn_Click(object sender, EventArgs e)
         {
 
@@ -100,6 +100,10 @@ namespace BankomatForm
                             }
 
                         }
+                        menuInCardLB.Visible = false;
+                        errorCash_1_LB.Text = "КАРТА ПРИНЯТА";
+                        errorCash_2_LB.Text = $"Ваш баланс : {myCard.Balans} грн.";
+                        menuInCardLB.Visible = false;
                         break;
                         
                     }
@@ -107,12 +111,12 @@ namespace BankomatForm
                     {// если не совпали - ошибка
                         errorCashPanel.Visible = true;
                         errorCashPanel.Location = new Point(98, 16);
+                        errorCashPanel.BackColor = Color.Black;
                         cashNumTB.Clear();
                         cashPinTB.Clear();
                     }
                 }
-                errorCash_1_LB.Text = "КАРТА ПРИНЯТА";
-                errorCash_2_LB.Text = $"Ваш баланс : {myCard.Balans} грн.";
+                
             }
         }
 
@@ -122,6 +126,7 @@ namespace BankomatForm
         // Правая нижняя кнопка
         // (ОТМЕНА) на панели выдачи карты
         // (ОТМЕНА) на панели выдачи наличных
+        // (БАЛАНС) на панели МЕНЮ
         private void right_2_MenuBtn_Click(object sender, EventArgs e)
         {
             //  если включено ОСНОВНОЕ МЕНЮ
@@ -133,14 +138,13 @@ namespace BankomatForm
             }
 
 
-
-
             // если включена панель выдачи карты:
             if (bigCardPanel.Visible == true)
             {
                 bigMenuPanel.Visible = true; // вкл.МЕНЮ
                 bigCardPanel.Visible = false; // выкл.КАРТУ
                 cardAddPanel.Visible = false; // выкл. сообщ.
+                menuInCardLB.Visible = false; // выкл. LB "Встав.карту"
             }
             // если включена панель ввода номера и пина карты для проверки
             if (cashMenuPanel.Visible == true)
@@ -190,6 +194,7 @@ namespace BankomatForm
                 
                 cardAddPanel.Visible = true;
                 cardAddPanel.Location = new Point(98, 16);
+                menuInCardLB.Visible = false;
 
             }
 
@@ -228,7 +233,7 @@ namespace BankomatForm
                     else
                     {// если не совпали - ошибка
                         errorCashPanel.Visible = true;
-                        errorCashPanel.Location = new Point(98, 16);
+                        errorCashPanel.Location = new Point(98, 16);                        
                         cashNumTB.Clear();
                         cashPinTB.Clear();
                     }
@@ -242,25 +247,38 @@ namespace BankomatForm
                 double sum = double.Parse(sumCashTB.Text);
                 if (myCard.Balans < sum)
                 {
+                    
                     errorSumCashPanel.Visible = true;
                     errorSumCashPanel.Location = new Point(98, 16);
-                    balansSumLB.Text = $"Ваш баланс {myCard.Balans - sum} грн.";
+                    balansSumLB.Text = $"Ваш баланс {myCard.Balans} грн.";
+                    menuInCardLB.Visible = false;
                 }
+                else if (sum % 100 != 0)
+                {
+                    errorSumCashPanel.Visible = true;
+                    errorSumCashPanel.Location = new Point(98, 16);
+                    errorSum_2_LB.Text = $"Сумма должна быть кратна 100";
+                    menuInCardLB.Visible = false;
+                }
+
                 else if (myCard.Balans > sum)
                 {
                     //  включить сообщение о снятии
                     errorSumCashPanel.Visible = true;
                     errorSumCashPanel.Location = new Point(98, 16);
+                    errorSumCashPanel.BackColor = Color.Black;
                     errorSum_1_LB.Text = "ОПЕРАЦИЯ УСПЕШНА";
                     errorSum_2_LB.Text = $"Вы сняли {sum} грн.";
                     cashBtn.BackColor = Color.Green;
-
-                    cards.Remove(myCard);                    
+                    //cards.Remove(new Card() { Number = myCard.Number} );
+                    for (int i = 0; i < cards.Count; i++)
+                    {
+                        if (cards[i].Number == myCard.Number)
+                            cards.Remove(cards[i]);
+                    }                   
                     myCard.Balans -= sum;
                     cards.Add(myCard);
-                    //string strToFile = JsonSerializer.Serialize(cards);
-                    //File.WriteAllText("cards.json", strToFile);
-
+                    menuInCardLB.Visible = false;
                 }
             }
 
@@ -313,6 +331,7 @@ namespace BankomatForm
 
         private void right_1_MenuBtn_Click(object sender, EventArgs e)
         {
+            File.Delete("cards.json");
             string strToFile = JsonSerializer.Serialize(cards);
             File.WriteAllText("cards.json", strToFile);
             Application.Exit();
@@ -367,9 +386,9 @@ namespace BankomatForm
         {
 
         }
+        // MessageBox.Show($" карт в массиве  {cards.Count}", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
-        
-       
+
     }
 }
